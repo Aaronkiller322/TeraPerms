@@ -1,0 +1,26 @@
+groups:
+  guest:
+    default: true
+    prefix: '&7Spieler'
+    weight: 0
+    permission:
+      - 'minecraft.command.tp'
+      - 'minecraft.command.weather'
+      - 'minecraft.command.say'
+  vip:
+    default: false
+    prefix: '&eVip'
+    weight: 2
+    inheritance:
+      - 'guest'
+    permission:
+      - 'minecraft.command.time'
+  admin:
+    default: false
+    prefix: '&4Admin'
+    weight: 3
+    inheritance:
+      - 'guest'
+      - 'vip'
+    permission:
+      - 'minecraft.command.gamemode'

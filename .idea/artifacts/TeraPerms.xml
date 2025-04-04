@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="TeraPerms">
+    <output-path>$PROJECT_DIR$/out/artifacts/Teraperms</output-path>
+    <root id="archive" name="TeraPerms.jar">
+      <element id="module-output" name="TeraPerms" />
+    </root>
+  </artifact>
+</component>

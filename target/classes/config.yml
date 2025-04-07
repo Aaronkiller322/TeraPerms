@@ -1,0 +1,98 @@
+# Berechtigungs-Konfigurationsdatei
+# Diese Datei definiert alle Nachrichten für das Berechtigungssystem
+
+no_permission: '%prefix% &4❌ &cDu hast keine Berechtigung, diese Aktion auszuführen!'
+no_player: '%prefix% &4❌ &cDer Spieler wurde nicht gefunden!'
+no_group: '%prefix% &4❌ &cDie Gruppe wurde nicht gefunden!'
+no_group_tabcompleter: '&4❌ &cDie Gruppe wurde nicht gefunden!'
+already_set: '%prefix% &4❌ &cDie Gruppe wurde bereits gesetzt!'
+exist_group: '%prefix% &4❌ &cDie Gruppe existiert bereits!'
+no_player_or_console: '%prefix% &4❌ &cBefehl nur für Konsole oder Spieler erlaubt!'
+
+commands:
+  # Befehl zum Neuladen der Berechtigungen
+  reload:
+    help: '%prefix% &7/perm reload'
+    successful: '%prefix% 🔄 &7Die Gruppen und Berechtigungen wurden erfolgreich aktualisiert!'
+
+  user:
+    # Benutzerbezogene Berechtigungen
+    add:
+      help: '%prefix% &7/perm user &e<Spieler>&7 add &e<Berechtigung>&7'
+      successful: '%prefix% &a✅ &7Die Berechtigung wurde erfolgreich hinzugefügt!'
+
+    remove:
+      help: '%prefix% &7/perm user &e<Spieler>&7 remove &e<Berechtigung>&7'
+      successful: '%prefix% &a✅ &7Die Berechtigung wurde erfolgreich entfernt!'
+
+    info:
+      help: '%prefix% &7/perm user &e<Spieler>&7 info'
+      successful:
+        - '&7╔═───≪✠ &eSpieler-Informationen &7✠≫───═╗'
+        - '§7║ §7Spieler§8 ►§7 §e%player%'
+        - '§7║ §7Primärgruppe§8 ►§7 §b%primarygroup%'
+        - '§7║ §7Vererbung§8 ►§7 §e%inheritance%'
+        - '§7║ §7Berechtigungen§8 ►§7 §e%permission%'
+        - '&7╚═───≪✠ &eSpieler-Informationen &7✠≫───═╝'
+
+    group:
+      # Gruppenverwaltung für Benutzer
+      add:
+        help: '%prefix% &7/perm user &e<Spieler>&7 group add &e<Gruppe>&7'
+        successful: '%prefix% &a✅ &7Der Spieler &e%player% &7wurde erfolgreich zur Gruppe &e%group% &7hinzugefügt!'
+
+      remove:
+        help: '%prefix% &7/perm user &e<Spieler>&7 group remove &e<Gruppe>&7'
+        successful: '%prefix% &a✅ &7Die Gruppe &e%group% &7wurde dem Spieler &e%player% &7erfolgreich entzogen!'
+
+  group:
+    # Gruppenverwaltung
+    create:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 create'
+      successful: '%prefix% &a✅ &7Die Gruppe &e%group% &7wurde erfolgreich erstellt!'
+
+    delete:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 delete'
+      successful: '%prefix% &a✅ &7Die Gruppe &e%group% &7wurde erfolgreich gelöscht!'
+
+    weight:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 weight &e<Nummer>&7'
+      successful: '%prefix% &a✅ &7Das Gewicht wurde erfolgreich aktualisiert!'
+
+    prefix:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 prefix &e<Text>&7'
+      successful: '%prefix% &a✅ &7Der Präfix wurde erfolgreich aktualisiert!'
+
+    add:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 add &e<Berechtigung>&7'
+      successful: '%prefix% &a✅ &7Die Berechtigung wurde erfolgreich hinzugefügt!'
+
+    remove:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 remove &e<Berechtigung>&7'
+      successful: '%prefix% &a✅ &7Die Berechtigung wurde erfolgreich entfernt!'
+
+    list:
+      help: '%prefix% &7/perm group list'
+      failed: '%prefix% &4❌ &cEs existieren keine Gruppen!'
+      successful: '&7📜 Gruppenliste: &8► &e%group%'
+
+    info:
+      help: '%prefix% &7/perm group &e<Gruppe>&7 info'
+      successful:
+        - '&7╔═───≪✠ &eGruppen-Informationen &7✠≫───═╗'
+        - '§7║ §7Gruppe§8 ►§7 §e%group%'
+        - '§7║ §7Präfix§8 ►§7 §b%prefix%'
+        - '§7║ §7Standard§8 ►§7 §e%default%'
+        - '§7║ §7Gewicht§8 ►§7 §e%weight%'
+        - '§7║ §7Vererbung§8 ►§7 §e%inheritance%'
+        - '§7║ §7Berechtigungen§8 ►§7 §e%permission%'
+        - '&7╚═───≪✠ &eGruppen-Informationen &7✠≫───═╝'
+    inheritance:
+      # Gruppenvererbung
+      add:
+        help: '%prefix% &7/perm group &e<Gruppe>&7 inheritance add &e<Gruppe>&7'
+        successful: '%prefix% &a✅ &7Die Gruppe wurde erfolgreich vererbt!'
+
+      remove:
+        help: '%prefix% &7/perm group &e<Gruppe>&7 inheritance remove &e<Gruppe>&7'
+        successful: '%prefix% &a✅ &7Die Gruppenvererbung wurde erfolgreich entfernt!'

@@ -1,0 +1,7 @@
+name: TeraPerms
+version: '1.2'
+main: me.aaron.teraperms.main.PermsMain
+api-version: '1.21'
+commands:
+  perm:
+    usage: /<command>
